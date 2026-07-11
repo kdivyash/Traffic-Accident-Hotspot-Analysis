@@ -1,5 +1,15 @@
 # 🚦 Traffic Accident Hotspot Analysis using Machine Learning
 
+![Python](https://img.shields.io/badge/Python-3.10+-blue)
+![Streamlit](https://img.shields.io/badge/Streamlit-Dashboard-red)
+![Machine Learning](https://img.shields.io/badge/ML-KMeans-orange)
+![Visualization](https://img.shields.io/badge/Visualization-Folium-green)
+
+
+An AI-powered dashboard that analyzes traffic accidents,
+detects accident hotspots, predicts severity, and generates
+road safety insights using Machine Learning.
+
 ## 📌 Project Overview
 
 Traffic accidents are a major safety concern. This project develops an
