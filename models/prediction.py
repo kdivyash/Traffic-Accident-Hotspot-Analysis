@@ -1,5 +1,5 @@
 import pandas as pd
-
+from pandas.api.types import is_string_dtype
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import LabelEncoder
@@ -24,13 +24,21 @@ def train_prediction_model(df):
 
     target = "severity"
 
+    categorical_columns = [
+        "weather",
+        "vehicle_type",
+        "road_type",
+        "road_condition",
+        "light_condition",
+        "severity"
+    ]
+
     encoders = {}
 
-    for column in features + [target]:
-        if data[column].dtype == "object":
-            encoder = LabelEncoder()
-            data[column] = encoder.fit_transform(data[column])
-            encoders[column] = encoder
+    for column in categorical_columns:
+        encoder = LabelEncoder()
+        data[column] = encoder.fit_transform(data[column].astype(str))
+        encoders[column] = encoder
 
     X = data[features]
     y = data[target]
