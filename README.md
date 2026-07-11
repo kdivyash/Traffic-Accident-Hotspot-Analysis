@@ -185,10 +185,30 @@ The dashboard will open in your browser.
 
 # 📸 Dashboard Preview
 
-(Add screenshots here)
 
----
+## Main Dashboard
 
+![Dashboard](screenshots/dashboard.png)
+
+
+## Interactive Accident Hotspot Map
+
+![Map](screenshots/map.png)
+
+
+## Machine Learning Analysis
+
+![ML Analysis](screenshots/ml_analysis.png)
+
+
+## Accident Severity Prediction
+
+![Prediction](screenshots/prediction.png)
+
+
+## AI Generated Insights
+
+![Insights](screenshots/insights.png)
 # 📈 Machine Learning Workflow
 
 Dataset
