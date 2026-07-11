@@ -1,0 +1,109 @@
+/* ===========================
+   Main Page
+=========================== */
+
+.main {
+
+    background-color:#F4F6F9;
+
+}
+
+
+/* ===========================
+   Sidebar
+=========================== */
+
+section[data-testid="stSidebar"]{
+
+    background:#20232A;
+
+}
+
+section[data-testid="stSidebar"] *{
+
+    color:white;
+
+}
+
+
+/* ===========================
+   Dashboard Title
+=========================== */
+
+h1{
+
+    color:#0057B8;
+
+    font-size:40px;
+
+    font-weight:bold;
+
+}
+
+
+/* ===========================
+   KPI Cards
+=========================== */
+
+div[data-testid="metric-container"]{
+
+    background:white;
+
+    border-radius:12px;
+
+    padding:20px;
+
+    box-shadow:0px 3px 15px rgba(0,0,0,0.1);
+
+    border-left:6px solid #0057B8;
+
+}
+
+
+/* ===========================
+   Dataframe
+=========================== */
+
+[data-testid="stDataFrame"]{
+
+    border-radius:10px;
+
+}
+
+
+/* ===========================
+   Buttons
+=========================== */
+
+.stButton>button{
+
+    border-radius:10px;
+
+    background:#0057B8;
+
+    color:white;
+
+    height:45px;
+
+    font-weight:bold;
+
+}
+
+.stButton>button:hover{
+
+    background:#003C82;
+
+}
+
+
+/* ===========================
+   Charts
+=========================== */
+
+.js-plotly-plot{
+
+    border-radius:12px;
+
+    box-shadow:0px 3px 10px rgba(0,0,0,.15);
+
+}

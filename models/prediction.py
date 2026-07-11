@@ -1,0 +1,54 @@
+import pandas as pd
+
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import LabelEncoder
+
+
+def train_prediction_model(df):
+    """
+    Train a Random Forest model to predict accident severity.
+    """
+
+    data = df.copy()
+
+    features = [
+        "weather",
+        "vehicle_type",
+        "road_type",
+        "road_condition",
+        "light_condition",
+        "speed_limit",
+        "casualties"
+    ]
+
+    target = "severity"
+
+    encoders = {}
+
+    for column in features + [target]:
+        if data[column].dtype == "object":
+            encoder = LabelEncoder()
+            data[column] = encoder.fit_transform(data[column])
+            encoders[column] = encoder
+
+    X = data[features]
+    y = data[target]
+
+    X_train, X_test, y_train, y_test = train_test_split(
+        X,
+        y,
+        test_size=0.2,
+        random_state=42
+    )
+
+    model = RandomForestClassifier(
+        n_estimators=200,
+        random_state=42
+    )
+
+    model.fit(X_train, y_train)
+
+    accuracy = model.score(X_test, y_test)
+
+    return model, encoders, accuracy
