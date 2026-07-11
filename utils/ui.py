@@ -71,6 +71,24 @@ def sidebar_filters(df):
         (df["road_type"].isin(road))
     ]
 
+    st.sidebar.markdown("---")
+
+    st.sidebar.info("""
+    👨‍💻 **Developer:** K Divyash
+
+    🚦 **Project:**
+    Traffic Accident Hotspot Analysis
+
+    🛠 **Tech Stack**
+    - Python
+    - Streamlit
+    - Plotly
+    - Folium
+    - Scikit-Learn
+    - Pandas
+    - NumPy
+    """)
+
     return filtered
 
 def show_kpi_cards(df):
