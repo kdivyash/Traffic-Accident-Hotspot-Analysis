@@ -10,6 +10,11 @@ An AI-powered dashboard that analyzes traffic accidents,
 detects accident hotspots, predicts severity, and generates
 road safety insights using Machine Learning.
 
+## 🌐 Live Demo
+
+🚀 **Try the application online:**
+
+
 ## 📌 Project Overview
 
 Traffic accidents are a major safety concern. This project develops an
