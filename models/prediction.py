@@ -47,6 +47,15 @@ def train_prediction_model(df):
         random_state=42
     )
 
+    print("Feature dtypes:")
+    print(X.dtypes)
+
+    print("\nMissing values:")
+    print(X.isnull().sum())
+
+    print("\nFirst 5 rows:")
+    print(X.head())
+
     model.fit(X_train, y_train)
 
     accuracy = model.score(X_test, y_test)
