@@ -13,7 +13,7 @@ road safety insights using Machine Learning.
 ## 🌐 Live Demo
 
 🚀 **Try the application online:**
-https://traffic-accident-hotspot-analysis-uvmzkq95kjqgipqcs9tsrc.streamlit.app/
+https://traffic-accident-hotspot-analysis-an3prue5mxpu2gdep3rkmp.streamlit.app/
 
 ## 📌 Project Overview
 
