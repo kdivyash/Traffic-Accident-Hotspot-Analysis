@@ -106,9 +106,6 @@ recommended_k, recommended_score, scores = recommend_clusters(
 
 stats = hotspot_statistics(clustered_df)
 
-prediction_model, encoders, accuracy = train_prediction_model(
-    clustered_df
-)
 
 # ----------------------------------------
 # Train Prediction Model
@@ -179,20 +176,20 @@ col1, col2 = st.columns(2)
 with col1:
     st.plotly_chart(
         elbow_chart(wcss),
-        use_container_width=True
+        width="stretch"
     )
 
 with col2:
     st.plotly_chart(
         silhouette_chart(scores),
-        use_container_width=True
+        width="stretch"
     )
 
 st.subheader("🏆 Hotspot Ranking")
 
 st.dataframe(
     stats,
-    use_container_width=True,
+    width="stretch",
     hide_index=True
 )
 

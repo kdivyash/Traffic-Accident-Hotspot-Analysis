@@ -20,7 +20,6 @@ def hotspot_map(
     heat_blur,
     heat_opacity
 ):
-    st.write(centers.head())
 
     # Create base map
     m = folium.Map(
@@ -256,6 +255,5 @@ def hotspot_map(
     st_folium(
     m,
     width=None,
-    height=650,
-    use_container_width=True
+    height=650
 )

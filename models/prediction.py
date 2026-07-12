@@ -1,10 +1,11 @@
+import streamlit as st 
 import pandas as pd
 from pandas.api.types import is_string_dtype
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import LabelEncoder
 
-
+@st.cache_resource
 def train_prediction_model(df):
     """
     Train a Random Forest model to predict accident severity.

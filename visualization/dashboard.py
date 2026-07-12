@@ -95,7 +95,7 @@ def show_dashboard(
 
         st.dataframe(
         df,
-        use_container_width=True,
+        width="stretch",
         hide_index=True
     )
     
@@ -110,38 +110,37 @@ def show_dashboard(
     # --------------------------
     with st.expander("📥 Download Reports"):
 
-        csv = df.to_csv(
-        index=False
-    )
-
-
-    st.download_button(
-        label="⬇ Download CSV Dataset",
-        data=csv,
-        file_name="filtered_accidents.csv",
-        mime="text/csv"
-    )
-
-
-    pdf_file = "accident_report.pdf"
-
-
-    generate_pdf_report(
-        pdf_file,
-        df,
-        hotspot_statistics(df)
-    )
-
-
-    with open(pdf_file,"rb") as file:
+        # CSV Download
+        csv = df.to_csv(index=False)
 
         st.download_button(
-            label="📄 Download PDF Report",
-            data=file,
-            file_name="accident_analysis_report.pdf",
-            mime="application/pdf"
+            label="⬇ Download CSV Dataset",
+            data=csv,
+            file_name="filtered_accidents.csv",
+            mime="text/csv"
         )
 
+        st.markdown("---")
+
+        # Generate PDF only when requested
+        if st.button("📄 Generate PDF Report"):
+
+            pdf_file = "accident_report.pdf"
+
+            generate_pdf_report(
+                pdf_file,
+                df,
+                hotspot_statistics(df)
+            )
+
+            with open(pdf_file, "rb") as file:
+
+                st.download_button(
+                    label="⬇ Download PDF Report",
+                    data=file,
+                    file_name="accident_analysis_report.pdf",
+                    mime="application/pdf"
+                )
     # --------------------------
     # Dashboard Information
     # --------------------------
