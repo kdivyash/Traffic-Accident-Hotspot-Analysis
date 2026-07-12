@@ -13,7 +13,7 @@ road safety insights using Machine Learning.
 ## 🌐 Live Demo
 
 🚀 **Try the application online:**
-https://traffic-accident-hotspot-analysis-an3prue5mxpu2gdep3rkmp.streamlit.app/
+[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://traffic-accident-hotspot-analysis-dwpkwpczjwg6d9sebwveyk.streamlit.app/)
 
 ## 📌 Project Overview
 
@@ -256,6 +256,17 @@ K Divyash
 B.Tech Computer Science Engineering
 
 ---
+
+## ✨ Features
+
+- 📊 Interactive Dashboard
+- 🤖 Machine Learning Hotspot Detection
+- 🗺️ Interactive Folium Maps
+- 📈 K-Means Clustering
+- 📍 Hotspot Ranking
+- 📄 PDF Report Generation
+- 📥 CSV Export
+- 🌐 Live Streamlit Deployment
 
 # ⭐ Future Improvements
 
