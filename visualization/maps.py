@@ -207,30 +207,37 @@ def hotspot_map(
     position: fixed;
     bottom: 50px;
     left: 50px;
-    width: 240px;
+    width: 250px;
     background-color: white;
-    border:2px solid grey;
-    z-index:9999;
-    font-size:14px;
-    padding:12px;
-    border-radius:10px;
-    box-shadow:2px 2px 8px rgba(0,0,0,0.3);
+    color: #222222;
+    border: 2px solid #444;
+    border-radius: 10px;
+    padding: 12px;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+    line-height: 1.7;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.35);
+    z-index: 9999;
     ">
 
-    <b>🚨 Accident Legend</b><br><br>
+    <h4 style="margin:0 0 10px 0; color:#222;">
+    🚨 Accident Legend
+    </h4>
 
-    🟢 Minor Accident<br>
-    🟠 Major Accident<br>
-    🔴 Fatal Accident<br>
+    <span style="color:green;">●</span> Minor Accident<br>
+    <span style="color:orange;">●</span> Major Accident<br>
+    <span style="color:red;">●</span> Fatal Accident
 
-    <hr>
+    <hr style="margin:10px 0;">
 
-    <b>🏆 Hotspot Ranking</b><br>
+    <h4 style="margin:0 0 10px 0; color:#222;">
+    🏆 Hotspot Ranking
+    </h4>
 
-    🔴 Rank #1 Hotspot<br>
-    🟠 Rank #2 Hotspot<br>
-    🔵 Rank #3 Hotspot<br>
-    ⚫ Other Hotspots
+    <span style="color:red;">●</span> Rank #1 Hotspot<br>
+    <span style="color:orange;">●</span> Rank #2 Hotspot<br>
+    <span style="color:blue;">●</span> Rank #3 Hotspot<br>
+    <span style="color:black;">●</span> Other Hotspots
 
     </div>
     """
@@ -248,6 +255,7 @@ def hotspot_map(
     # Display map
     st_folium(
     m,
-    width=900,
-    height=600
+    width=None,
+    height=650,
+    use_container_width=True
 )
